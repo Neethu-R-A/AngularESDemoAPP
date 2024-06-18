@@ -1,0 +1,123 @@
+<div class="row container">
+  <div class="col-4">
+    <div>
+      <label for="teams">Select a team:</label>
+      <select
+        id="teams"
+        [(ngModel)]="selectedTeam"
+        name="teams"
+        style="width: 80px"
+      >
+        <option *ngFor="let team of allTeamsList" [value]="team">
+          {{ team }}
+        </option>
+      </select>
+    </div>
+
+    <!-- <p>You selected: {{ selectedTeam }}</p>
+    <div *ngIf="selectedTeam">
+      <p>Matches Won by</p>
+      <p>{{ selectedTeam }} : {{ matchesWon }}</p>
+      <button (click)="getAllTeams()">submit</button>
+    </div> -->
+  </div>
+
+  <div class="col-4">
+    <div>
+      <label for="seasons">Select Season:</label>
+      <select
+        id="seasons"
+        [(ngModel)]="selectedSeason"
+        name="seasons"
+        style="width: 80px"
+      >
+        <option *ngFor="let season of allSeasonsList" [value]="season">
+          {{ season }}
+        </option>
+      </select>
+    </div>
+
+    <!-- <p>You selected: {{ selectedTeam }}</p> -->
+    <!-- <div *ngIf="selectedSeason">
+      <p>
+        Matches Won by {{ selectedTeam }} in {{ selectedSeason }} :
+        {{ matchWonBySeason }}
+      </p>
+      <button (click)="getMatchesBySeason()">submit</button>
+    </div> -->
+  </div>
+
+  <div class="col-4">
+    <div>
+      <label for="kinds">Select Kind:</label>
+      <select
+        id="kinds"
+        [(ngModel)]="selectedKind"
+        name="kinds"
+        style="width: 80px"
+      >
+        <option *ngFor="let kind of allKindsList" [value]="kind">
+          {{ kind }}
+        </option>
+      </select>
+    </div>
+
+    <!-- <p>You selected: {{ selectedTeam }}</p> -->
+    <!-- <div *ngIf="selectedKind">
+      <p>
+        Matches Won by {{ selectedTeam }} in {{ selectedSeason }} and how many
+        got {{ selectedKind }} :
+        {{ gotKind }}
+      </p>
+      <button (click)="getMatchesWonKindBySeason()">submit</button>
+    </div> -->
+  </div>
+
+  <div class="col-4">
+    <div>
+      <label for="venues">Select Venue:</label>
+      <select
+        id="venue"
+        [(ngModel)]="selectedSeason"
+        name="venues"
+        style="width: 80px"
+      >
+        <option *ngFor="let venue of allVenueList" [value]="venue">
+          {{ venue }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div>
+      <label for="city">Select City:</label>
+      <select
+        id="city"
+        [(ngModel)]="selectedSeason"
+        name="city"
+        style="width: 80px"
+      >
+        <option *ngFor="let city of allCityList" [value]="city">
+          {{ city }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div>
+      <label for="umpire">Select Umpire:</label>
+      <select
+        id="umpire"
+        [(ngModel)]="selectedSeason"
+        name="umpire"
+        style="width: 80px"
+      >
+        <option *ngFor="let umpire of allUmpireList" [value]="umpire">
+          {{ umpire }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
